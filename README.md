@@ -1,8 +1,12 @@
 # FORMA
 
 Static demonstration landing page for a fictional studio of custom kitchens and
-built-in furniture. The repository is a portfolio project for a web-development
-service; it is not a live furniture business.
+built-in furniture. It is a portfolio project for a web-development service,
+not a live furniture business.
+
+## Live demo
+
+https://got30017-cyber.github.io/forma-landing-demo/
 
 ## Stack
 
@@ -13,8 +17,8 @@ service; it is not a live furniture business.
 
 ## Status
 
-Task 03: static-deployment preparation complete. The site is ready to publish
-on a standard static host once a production URL is chosen.
+Complete and deployed. The repository is frozen for code changes before
+portfolio screenshot production.
 
 ## Run locally
 
@@ -35,8 +39,19 @@ script.js               Menu, form validation, subtle reveal behavior
 assets/images/          Responsive WebP image assets
 assets/fonts/           Local Cormorant Garamond and Manrope files
 robots.txt              Baseline crawler directive
+sitemap.xml             Search-engine sitemap
 site.webmanifest        Browser/app metadata
 ```
+
+## Quality highlights
+
+- Semantic landmarks, logical heading structure, visible keyboard focus, a
+  keyboard-accessible mobile menu, native FAQ controls, and labelled form
+  errors.
+- Responsive WebP images with `srcset`, lazy loading below the fold, and local
+  font files.
+- Canonical, Open Graph and Twitter metadata, plus `robots.txt` and a sitemap
+  for the live URL.
 
 ## Images and fonts
 
@@ -53,16 +68,10 @@ submission. It does not transmit or store user data.
 
 ## Deployment
 
-This repository has no build step. Upload the repository contents to the
-document root of any static host, preserving the `assets/` directory and the
-root-level `robots.txt` and `site.webmanifest` files.
+FORMA is deployed on GitHub Pages at the live-demo URL above. The repository
+has no build step. For another static host, upload the repository contents to
+the document root while preserving `assets/`, `robots.txt`, `sitemap.xml`, and
+`site.webmanifest`.
 
-The production URL is `https://got30017-cyber.github.io/forma-landing-demo/`.
 The canonical URL, Open Graph/Twitter image metadata, sitemap, and `robots.txt`
-are already configured for that URL.
-
-## Deferred items
-
-- Social-card validation against the deployed URL
-- Real form delivery integration
-- CMS, backend, analytics, and final portfolio screenshots
+are configured for the GitHub Pages URL.
