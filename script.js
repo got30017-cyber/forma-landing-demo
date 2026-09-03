@@ -24,15 +24,6 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-document.querySelectorAll('.faq-list summary').forEach((summary) => {
-  summary.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      summary.parentElement.open = !summary.parentElement.open;
-    }
-  });
-});
-
 const form = document.querySelector('.contact-form');
 const successMessage = form.querySelector('.form-success');
 const fields = {
@@ -106,3 +97,19 @@ form.addEventListener('submit', (event) => {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 800) setMenu(false);
 });
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+  document.body.classList.add('reveal-ready');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -8%', threshold: 0.08 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
