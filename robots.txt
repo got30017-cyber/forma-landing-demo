@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://got30017-cyber.github.io/forma-landing-demo/sitemap.xml

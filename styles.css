@@ -170,10 +170,12 @@ h3 { font-size: clamp(2rem, 3vw, 3.2rem); letter-spacing: -.03em; }
 .form-field label { margin-bottom: .45rem; font-size: .75rem; font-weight: 600; letter-spacing: .05em; }
 .form-field input, .form-field textarea, .form-field select { width: 100%; min-width: 0; border: 0; border-bottom: 1px solid rgb(247 244 238 / 40%); border-radius: 0; background: transparent; color: var(--color-light); outline: 0; transition: border-color var(--transition); }
 .form-field input, .form-field select { min-height: 3.5rem; }
-.form-field textarea { padding-block: .75rem; resize: vertical; }
+.form-field textarea { padding-block: .75rem; border-top: 1px solid rgb(247 244 238 / 24%); caret-color: var(--color-light); line-height: 1.55; resize: vertical; }
 .form-field select { color-scheme: dark; }
-.form-field input::placeholder, .form-field textarea::placeholder { color: #aaa49a; opacity: 1; }
+.form-field select option { background-color: var(--color-light); color: var(--color-text); }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #c2bbb0; opacity: 1; }
 .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-bottom-color: var(--color-light); }
+.form-field textarea:focus { border-top-color: rgb(247 244 238 / 62%); }
 .form-field [aria-invalid="true"] { border-bottom-color: #e8a99c; }
 .field-hint { margin-top: .4rem; color: #aaa49a; font-size: .72rem; }
 .field-error { min-height: 1.2rem; margin-top: .3rem; color: #f0b4a8; font-size: .76rem; }

@@ -57,20 +57,12 @@ This repository has no build step. Upload the repository contents to the
 document root of any static host, preserving the `assets/` directory and the
 root-level `robots.txt` and `site.webmanifest` files.
 
-After a production HTTPS URL is available, add that real URL to:
-
-1. `<link rel="canonical">`;
-2. `og:url`;
-3. an absolute `og:image` URL pointing to the existing hero image;
-4. `twitter:image`, if the selected platform uses it;
-5. the `Sitemap:` line in `robots.txt`, if a sitemap is added.
-
-Do not use a placeholder domain for any of those values.
+The production URL is `https://got30017-cyber.github.io/forma-landing-demo/`.
+The canonical URL, Open Graph/Twitter image metadata, sitemap, and `robots.txt`
+are already configured for that URL.
 
 ## Deferred items
 
-- Production domain and canonical/social URLs
 - Social-card validation against the deployed URL
-- Sitemap after the final public URL is known
 - Real form delivery integration
 - CMS, backend, analytics, and final portfolio screenshots
